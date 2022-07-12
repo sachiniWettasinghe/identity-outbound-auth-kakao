@@ -49,24 +49,16 @@
                 <artifactId>oltu</artifactId>
                 <version>${oltu.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>org.apache.felix.scr.ds-annotations</artifactId>
+                <version>${apache.felix.scr.ds.annotations.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <groupId>org.apache.felix</groupId>
-                    <artifactId>maven-scr-plugin</artifactId>
-                    <version>${maven.scr.plugin.version}</version>
-                    <executions>
-                        <execution>
-                            <id>generate-scr-scrdescriptor</id>
-                            <goals>
-                                <goal>scr</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
@@ -185,7 +177,7 @@
         </plugins>
     </build>
     <properties>
-        <oauth2.outbound.version>1.0.1</oauth2.outbound.version>
+        <oauth2.outbound.version>1.0.4</oauth2.outbound.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <oltu.version>1.0.0.wso2v3</oltu.version>
         <carbon.identity.framework.version>5.17.5</carbon.identity.framework.version>
